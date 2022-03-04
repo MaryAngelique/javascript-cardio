@@ -66,7 +66,11 @@ function reverseString(str) {
 // Return true if palindrome and false if not
 // ex. isPalindrome('racecar') === 'true', isPalindrome('hello') == false
 
-function isPalindrome(str) {}
+function isPalindrome(str) {
+    const strRev = str.split("").reverse().join("");
+
+    return strRev === str;
+}
 
 
 
@@ -99,6 +103,6 @@ function fizzBuzz() {}
 
 
 // Call Function
-const output = reverseString('hello');
+const output = isPalindrome('hello');
 
 console.log(output);
