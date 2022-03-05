@@ -16,7 +16,7 @@ function longestWord(sen) {
     const longestWord = sorted.filter(function(word) {
        return word.length === sorted[0].length;  
     });
-
+ 
     console.log(longestWord);
 
     // SOLUTION 3 - Only return an array if multiple words, otherwise return a string
