@@ -116,7 +116,34 @@ function capitalizeLetters(str) {
 // CHALLENGE 5: MAX CHARACTER
 // Return the character that is most common in a string
 // ex. maxCharacter('javascript') == 'a'
-function maxCharacter(str) {}
+function maxCharacter(str) {
+    // ForEach
+    const chars = {};
+    let max = 0;
+    let maxChar = "";
+
+    str.split("").forEach(function(char) {
+        
+        if (chars[char]) {
+            chars[char]++;
+
+        } else {
+            chars[char] = 1;
+        }
+    });
+
+    for (let char in chars) {
+        //debugger; // node js debugger
+        if (chars[char] > max) {
+            max = chars[char];
+            maxChar = char;
+        }
+    }
+
+    return maxChar;
+
+
+}
 
 
 
@@ -127,6 +154,6 @@ function fizzBuzz() {}
 
 
 // Call Function
-const output = capitalizeLetters('i love javascript');
+const output = maxCharacter('javascript');
 
 console.log(output);
