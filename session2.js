@@ -6,16 +6,22 @@ function longestWord(sen) {
     const word = sen.toLowerCase().match(/[a-z0-9]+/g);
 
     // SOLUTION 1 - Return a single longest word
-    const sorted = word.sort(function(a, b) {
-        return b.length - a.length;
-    });
+    // const sorted = word.sort(function(a, b) {
+    //     return b.length - a.length;
+    // });
+
+    // Arrow Function
+    const sorted = word.sort((a, b) => b.length - a.length);
 
     console.log(sorted)
 
     // SOLUTION 2 - Return an array and include multiple words if they have the same length
-    const longestWord = sorted.filter(function(word) {
-       return word.length === sorted[0].length;  
-    });
+    // const longestWord = sorted.filter(function(word) {
+    //    return word.length === sorted[0].length;  
+    // });
+
+    // Arrow Function
+    const longestWord = sorted.filter((word) => word.length === sorted[0].length);
  
     console.log(longestWord);
 
